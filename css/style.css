@@ -1,0 +1,60 @@
+* {
+    font-size: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* styling page age 18 */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.containerPage18 {
+    background-color: #D2B48C;;
+    height: 250px;
+}
+
+.textInformation {
+    padding: 20px;
+    
+}
+
+.textInformation h1 {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-yesorno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-yesorno .yes {
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #00FF7F;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button-yesorno .no {
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #FF6347;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
