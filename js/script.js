@@ -1,7 +1,7 @@
 // Direcionamento dos buttons da Page Age
 
 document.getElementById("btnSim").addEventListener("click", function() {
-    window.location.href = "../html/index.html";
+    window.location.href = "../html/pageLogin.html";
 });
 
 document.getElementById("btnNao").addEventListener("click", function() {
