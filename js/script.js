@@ -1,3 +1,5 @@
+// Direcionamento dos buttons da Page Age
+
 document.getElementById("btnSim").addEventListener("click", function() {
     window.location.href = "../html/index.html";
 });
