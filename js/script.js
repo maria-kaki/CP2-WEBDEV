@@ -9,5 +9,5 @@ document.getElementById("btnNao").addEventListener("click", function() {
 });
 
 function produtoespecifico(){
-    alert("Deu certo!")
+    window.location.href = "../html/pageSpecificProduct.html";
 }
