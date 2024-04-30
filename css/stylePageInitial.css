@@ -32,3 +32,22 @@ nav a {
 nav a:hover {
     color: #331212;
 }
+
+.recommended-wines img{
+    max-width: 200px; 
+    max-height: 200px; 
+    aspect-ratio: 16/9;
+}
+
+.section-carrossel{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-carrossel li {
+    display: inline-block;
+    margin: 10px;
+}
