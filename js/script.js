@@ -1,18 +1,29 @@
 // Direcionamento dos buttons da Page Age
 
-document.getElementById("btnSim").addEventListener("click", function() {
-    window.location.href = "../html/pageLogin.html";
-});
+// document.getElementById("btnSim").addEventListener("click", function() {
+//     window.location.href = "../html/pageLogin.html";
+// });
 
-document.getElementById("btnNao").addEventListener("click", function() {
-    window.location.href = "https://www.docemalu.com.br/chocolate-guarda-chuva-tchuca-c-50---ki-kakau/p";
-});
+// document.getElementById("btnNao").addEventListener("click", function() {
+//     window.location.href = "https://www.docemalu.com.br/chocolate-guarda-chuva-tchuca-c-50---ki-kakau/p";
+// });
 
-function produtoespecifico(){
-    window.location.href = "../html/pageSpecificProduct.html";
+function produtoespecifico(event, vinhoinput) {
+    switch (vinhoinput) {
+      case "portada":
+        window.location.href = "../html/products/pageVinhoPortada.html";
+        break;
+      case "pronutto":
+        window.location.href = "../html/products/pageVinhoPronutto.html";
+        break;
+      case "sanmartin":
+        window.location.href = "../html/products/pageVinhoSanmartin.html";
+        break;
+      case "sansevero":
+        window.location.href = "../html/products/pageVinhoSansevero.html";
+        break;
+    }
 }
-
-// Configurando o formulário de login
 
 function login() {
     var usuario = document.getElementById("usuario").value;
