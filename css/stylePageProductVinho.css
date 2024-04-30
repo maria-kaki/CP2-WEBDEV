@@ -33,19 +33,19 @@ nav a:hover {
     color: #331212;
 }
 
-.main-text h1 {
+.vinho h1 {
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
 
-.main-text p {
+.descricao p {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
-.section-products {
+.organizacao {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -53,14 +53,30 @@ nav a:hover {
     align-items: center;
 }
 
-.product {
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.descricao {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.product img{
-    max-width: 200px; 
-    max-height: 200px; 
+.imagem img{
+    max-width: 400px; 
+    max-height: 400px; 
     aspect-ratio: 16/9;
+}
+
+.carrinho{
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(109, 155, 63);
+}
+
+.carrinho:hover{
+    background-color: rgb(12, 58, 12);
+    color: rgb(137, 253, 137);
 }
