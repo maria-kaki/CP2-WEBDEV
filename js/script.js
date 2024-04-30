@@ -12,8 +12,6 @@ function produtoespecifico(){
     window.location.href = "../html/pageSpecificProduct.html";
 }
 
-// Configurando o formulário de login
-
 function login() {
     var usuario = document.getElementById("usuario").value;
     var usuarioCorreto = "admin";
