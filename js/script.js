@@ -26,6 +26,17 @@ function comprarproduto(event,vinho){
     alert(`O vinho ${vinho} foi adicionado ${quantidade} vezes ao carinho!`)
 }
 
+function desconto(){
+    var desconto = document.getElementById("desconto").value
+
+    if (desconto === "FIAP2024"){
+        alert("Cupom Inserido!")
+    }
+    else{
+        alert("Cupom Inválido!")
+    }
+}
+
 function produtoespecifico(event, vinhoinput) {
     switch (vinhoinput) {
       case "portada":
