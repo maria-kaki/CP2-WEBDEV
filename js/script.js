@@ -1,4 +1,17 @@
-// Direcionamento dos buttons da Page Age
+
+var precoPorGarrafa = parseFloat(document.getElementById("valor").getAttribute("value"));
+var inputQuantidade = document.getElementById("quantidade");
+var totalElement = document.getElementById("total"); 
+
+function atualizarTotal() {
+  var quantidade = parseInt(inputQuantidade.value);
+  console.log(precoPorGarrafa)
+  var total = quantidade * precoPorGarrafa;
+  totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+}
+
+inputQuantidade.addEventListener("change", atualizarTotal);
+atualizarTotal();
 
 function btnSim() {
     window.location.href = "../html/pageLogin.html";
@@ -9,7 +22,8 @@ function btnNao() {
 };
 
 function comprarproduto(event,vinho){
-    alert(`O vinho ${vinho} foi adicionado ao carinho!`)
+    var quantidade = document.getElementById("quantidade").value
+    alert(`O vinho ${vinho} foi adicionado ${quantidade} vezes ao carinho!`)
 }
 
 function produtoespecifico(event, vinhoinput) {

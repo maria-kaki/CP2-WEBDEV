@@ -30,7 +30,10 @@
                     </div>
                     <div class="descricao">
                         <p>Descrição do vinho!</p>
-                        <label for="vinho" class="valor" value="69.90">RS 69,90</label>
+                        <label for="vinho" id="valor" value="69.90">RS 69,90</label>
+                        <label for="quantidade">Adicione a quantidade</label>
+                        <input min="0" type="number" name="quantidade" id="quantidade">
+                        <p id="total">Total: R$ 0,00</p>
                         <button class="carrinho" type="button" onclick="comprarproduto(this,'San Martin')">Adicionar ao carrinho</button>
                     </div>
                 </div>

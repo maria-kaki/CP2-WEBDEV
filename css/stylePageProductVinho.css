@@ -69,6 +69,7 @@ nav a:hover {
 }
 
 .carrinho{
+    border: none;
     border-radius: 50px;
     height: 50px;
     width: 100px;
