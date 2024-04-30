@@ -11,3 +11,20 @@ document.getElementById("btnNao").addEventListener("click", function() {
 function produtoespecifico(){
     window.location.href = "../html/pageSpecificProduct.html";
 }
+
+// Configurando o formulário de login
+
+document.getElementById("btnLogar").addEventListener("click", function() {
+    let usuario = document.getElementById("usuario").value;
+    let usuarioCorreto = "admin";
+
+    let senha = document.getElementById("senha").value;
+    let senhaCorreta = "admin";
+
+    if (usuario !== usuarioCorreto || senha !== senhaCorreta) {
+        alert("Usuário ou senha incorreto!");
+    } else {
+        alert(`Olá, ${usuario}! Têm vinhos esperando por você!`);
+        window.location.href = "../html/pageInitial.html";
+    }
+});
