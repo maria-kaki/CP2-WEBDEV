@@ -68,3 +68,12 @@ function login() {
         window.location.href = "../html/pageInitial.html";
     }
 }
+
+
+// Page Fale Conosco
+
+function btnEnter() {
+    alert("Enviado com sucesso! Em breve entraremos em contato.");
+    window.location.href = "../html/pageInitial.html";
+    
+};
