@@ -1,40 +1,41 @@
 
 var precoPorGarrafa = parseFloat(document.getElementById("valor").getAttribute("value"));
 var inputQuantidade = document.getElementById("quantidade");
-var totalElement = document.getElementById("total"); 
+var totalElement = document.getElementById("total");
 
 function atualizarTotal() {
   var quantidade = parseInt(inputQuantidade.value);
-  console.log(precoPorGarrafa)
   var total = quantidade * precoPorGarrafa;
   totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
 }
 
-inputQuantidade.addEventListener("change", atualizarTotal);
-atualizarTotal();
-
-function btnSim() {
-    window.location.href = "../html/pageLogin.html";
-};
-
-function btnNao() {
-    window.location.href = "https://www.docemalu.com.br/chocolate-guarda-chuva-tchuca-c-50---ki-kakau/p";
-};
+if (inputQuantidade) {
+    inputQuantidade.addEventListener("change", atualizarTotal);
+    atualizarTotal();
+}
 
 function comprarproduto(event,vinho){
     var quantidade = document.getElementById("quantidade").value
     alert(`O vinho ${vinho} foi adicionado ${quantidade} vezes ao carinho!`)
 }
 
-function desconto(){
-    var desconto = document.getElementById("desconto").value
+var usedDiscountCode = false;
 
-    if (desconto === "FIAP2024"){
-        alert("Cupom Inserido!")
-    }
-    else{
-        alert("Cupom Inválido!")
-    }
+function desconto() {
+  var descontoCodigo = document.getElementById("desconto").value.toUpperCase();
+  if (descontoCodigo === "FIAP2024" && !usedDiscountCode) {
+    var descontoValor = precoPorGarrafa * 0.1;
+    var novoValor = precoPorGarrafa - descontoValor;
+    precoPorGarrafa = novoValor.toFixed(2);
+    document.getElementById("valor").textContent = `R$ ${novoValor.toFixed(2)}`;
+    totalElement.textContent = `Total: R$ ${(novoValor * inputQuantidade.value).toFixed(2)}`;
+    console.log(precoPorGarrafa)
+    usedDiscountCode = true;
+  } else if (descontoCodigo === "FIAP2024" && usedDiscountCode) {
+    alert("Cupom já aplicado.");
+  } else {
+    alert("Cupom de desconto inválido.");
+  }
 }
 
 function produtoespecifico(event, vinhoinput) {
@@ -76,4 +77,11 @@ function btnEnter() {
     alert("Enviado com sucesso! Em breve entraremos em contato.");
     window.location.href = "../html/pageInitial.html";
     
+};
+function btnSim() {
+    window.location.href = "../html/pageLogin.html";
+};
+
+function btnNao() {
+    window.location.href = "https://www.docemalu.com.br/chocolate-guarda-chuva-tchuca-c-50---ki-kakau/p";
 };
