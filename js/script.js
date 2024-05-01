@@ -9,8 +9,10 @@ function atualizarTotal() {
   totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
 }
 
-inputQuantidade.addEventListener("change", atualizarTotal);
-atualizarTotal();
+if (inputQuantidade) {
+    inputQuantidade.addEventListener("change", atualizarTotal);
+    atualizarTotal();
+}
 
 function comprarproduto(event,vinho){
     var quantidade = document.getElementById("quantidade").value
