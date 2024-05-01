@@ -17,22 +17,23 @@ function comprarproduto(event,vinho){
     alert(`O vinho ${vinho} foi adicionado ${quantidade} vezes ao carinho!`)
 }
 
+var usedDiscountCode = false;
+
 function desconto() {
-    var usedDiscountCode = false;
-    var descontoCodigo = document.getElementById("desconto").value.toUpperCase();
-    if (descontoCodigo === "FIAP2024" && !usedDiscountCode) {
-        var descontoValor = precoPorGarrafa * 0.1;
-        var novoValor = precoPorGarrafa - descontoValor;
-        precoPorGarrafa = novoValor.toFixed(2);
-        precoPorGarrafa.textContent = `R$ ${novoValor.toFixed(2)}`;
-        totalElement.textContent = `Total: R$ ${(novoValor * inputQuantidade.value).toFixed(2)}`;
-        console.log(precoPorGarrafa)
-        usedDiscountCode = true;
-    } else if (descontoCodigo === "FIAP2024" && usedDiscountCode) {
-        alert("Cupom já aplicado.");
-    } else {
-        alert("Cupom de desconto inválido.");
-    }
+  var descontoCodigo = document.getElementById("desconto").value.toUpperCase();
+  if (descontoCodigo === "FIAP2024" && !usedDiscountCode) {
+    var descontoValor = precoPorGarrafa * 0.1;
+    var novoValor = precoPorGarrafa - descontoValor;
+    precoPorGarrafa = novoValor.toFixed(2);
+    document.getElementById("valor").textContent = `R$ ${novoValor.toFixed(2)}`;
+    totalElement.textContent = `Total: R$ ${(novoValor * inputQuantidade.value).toFixed(2)}`;
+    console.log(precoPorGarrafa)
+    usedDiscountCode = true;
+  } else if (descontoCodigo === "FIAP2024" && usedDiscountCode) {
+    alert("Cupom já aplicado.");
+  } else {
+    alert("Cupom de desconto inválido.");
+  }
 }
 
 function produtoespecifico(event, vinhoinput) {
