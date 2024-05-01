@@ -28,11 +28,11 @@ function desconto() {
         totalElement.textContent = `Total: R$ ${(novoValor * inputQuantidade.value).toFixed(2)}`;
         console.log(precoPorGarrafa)
         usedDiscountCode = true;
-      } else if (descontoCodigo === "FIAP2024" && usedDiscountCode) {
+    } else if (descontoCodigo === "FIAP2024" && usedDiscountCode) {
         alert("Cupom já aplicado.");
-      } else {
+    } else {
         alert("Cupom de desconto inválido.");
-      }
+    }
 }
 
 function produtoespecifico(event, vinhoinput) {
